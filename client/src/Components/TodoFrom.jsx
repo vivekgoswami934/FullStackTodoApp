@@ -13,6 +13,7 @@ const TodoFrom = () => {
   const onFormSubmit = (e) => {
     e.preventDefault();
     dispatch(addNewTodo(text));
+    setText("")
   };
 
   return (
@@ -22,6 +23,7 @@ const TodoFrom = () => {
         placeholder="Enter new Todo..."
         className="input"
         onChange={onInputChange}
+        value={text}
       />
     </form>
   );
